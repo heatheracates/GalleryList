@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" id="0V5-Lv-Svr">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lNC-hv-KX9">
                             <connections>
-                                <segue destination="Ryo-by-dHP" kind="show" id="Vc7-Uw-dVe"/>
+                                <segue destination="Ryo-by-dHP" kind="show" identifier="gallerySegue" id="Vc7-Uw-dVe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -76,11 +76,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dZv-pL-cKh">
-                                <rect key="frame" x="164" y="299" width="34" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dZv-pL-cKh">
+                                <rect key="frame" x="162.5" y="299" width="51" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOd-Qo-bEn">
-                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title=" add "/>
@@ -95,17 +95,36 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="fOd-Qo-bEn" firstAttribute="centerX" secondItem="dZv-pL-cKh" secondAttribute="centerX" id="5R3-6I-VxV"/>
                                     <constraint firstItem="fOd-Qo-bEn" firstAttribute="centerX" secondItem="dZv-pL-cKh" secondAttribute="centerX" id="ko8-99-I5B"/>
+                                    <constraint firstItem="fOd-Qo-bEn" firstAttribute="centerX" secondItem="dZv-pL-cKh" secondAttribute="centerX" id="swY-Qc-mrM"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkN-51-YQX">
+                                <rect key="frame" x="161.5" y="343" width="51" height="30"/>
+                                <color key="backgroundColor" red="0.93020457029342651" green="0.014884085394442081" blue="0.27659422159194946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title=" delete "/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="deleteFromGalleryTapped:" destination="Ryo-by-dHP" eventType="touchUpInside" id="03r-dh-vG8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lkN-51-YQX" firstAttribute="width" secondItem="fOd-Qo-bEn" secondAttribute="width" id="6xQ-gi-L0T"/>
                             <constraint firstItem="fOd-Qo-bEn" firstAttribute="top" secondItem="Bgg-K1-pFh" secondAttribute="bottom" constant="18" id="8Rw-43-vXm"/>
                             <constraint firstItem="Bgg-K1-pFh" firstAttribute="centerX" secondItem="Djh-EY-PTu" secondAttribute="centerX" id="8T0-Y9-Ngb"/>
                             <constraint firstItem="gYh-fw-M1r" firstAttribute="centerX" secondItem="Djh-EY-PTu" secondAttribute="centerX" id="Avd-2a-w2v"/>
                             <constraint firstItem="Bgg-K1-pFh" firstAttribute="top" secondItem="gYh-fw-M1r" secondAttribute="bottom" constant="17" id="IIo-0T-piI"/>
                             <constraint firstItem="dZv-pL-cKh" firstAttribute="centerX" secondItem="Djh-EY-PTu" secondAttribute="centerX" id="OrB-Ub-1OM"/>
+                            <constraint firstItem="lkN-51-YQX" firstAttribute="centerX" secondItem="Djh-EY-PTu" secondAttribute="centerX" id="SUA-z6-Deo"/>
+                            <constraint firstItem="lkN-51-YQX" firstAttribute="top" secondItem="fOd-Qo-bEn" secondAttribute="bottom" constant="14" id="UUk-vN-2wo"/>
                             <constraint firstItem="gYh-fw-M1r" firstAttribute="top" secondItem="EJU-bh-b8x" secondAttribute="bottom" constant="20" id="bqO-fQ-aiW"/>
                             <constraint firstItem="dZv-pL-cKh" firstAttribute="centerX" secondItem="Djh-EY-PTu" secondAttribute="centerX" id="rIz-AQ-uYv"/>
                             <constraint firstItem="Bgg-K1-pFh" firstAttribute="width" secondItem="gYh-fw-M1r" secondAttribute="width" id="rrh-CH-zwU"/>
@@ -126,6 +145,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="fOd-Qo-bEn" id="fgE-cO-8Ey"/>
+                        <outlet property="deleteButton" destination="lkN-51-YQX" id="kq2-b8-SDf"/>
                         <outlet property="galleryImageTextFeild" destination="Bgg-K1-pFh" id="gWG-AH-UwB"/>
                         <outlet property="galleryImageView" destination="gYh-fw-M1r" id="zi7-uy-6I0"/>
                     </connections>
@@ -150,7 +171,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pk4-47-ltu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="776.76161919040487"/>
+            <point key="canvasLocation" x="1377" y="-666"/>
         </scene>
     </scenes>
     <resources>

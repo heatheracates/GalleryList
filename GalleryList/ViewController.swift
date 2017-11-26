@@ -45,7 +45,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellItem = galleryItems[indexPath.row]
+        performSegue(withIdentifier: "gallerySegue", sender: cellItem)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! AddPictureViewController
+        nextVC.galleryItem = sender as? GalleryItem
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
