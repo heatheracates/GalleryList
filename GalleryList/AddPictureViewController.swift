@@ -8,15 +8,17 @@
 
 import UIKit
 
-class AddPictureViewController: UIViewController {
+class AddPictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var galleryImageView: UIImageView!
     @IBOutlet weak var galleryImageTextFeild: UITextField!
     
+    var imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        imagePicker.delegate = self
     }
 
     
@@ -24,6 +26,15 @@ class AddPictureViewController: UIViewController {
     }
     
     @IBAction func photosButtonTapped(_ sender: Any) {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        galleryImageView.image = image
+        //dismiss the view once image is set
+        imagePicker.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func addToGalleryTapped(_ sender: Any) {
