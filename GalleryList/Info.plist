@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Allows you to take photos and add them to the gallery straight from the app</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>we want access to your existing photos for you to add straight from your existing library instead of taking a new picture every time. </string>
+	<string>We want access to your existing photos for you to add straight from your existing library instead of taking a new picture every time. </string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

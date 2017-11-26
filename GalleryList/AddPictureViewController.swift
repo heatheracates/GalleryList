@@ -36,7 +36,8 @@ class AddPictureViewController: UIViewController, UIImagePickerControllerDelegat
     
     
     @IBAction func cameraTapped(_ sender: Any) {
-    }
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)    }
     
     @IBAction func photosButtonTapped(_ sender: Any) {
         imagePicker.sourceType = .photoLibrary
