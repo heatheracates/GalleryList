@@ -38,6 +38,14 @@ class AddPictureViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func addToGalleryTapped(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let galleryItem = GalleryItem(context: context)
+        galleryItem.photoText = galleryImageTextFeild.text
+        galleryItem.photo = UIImagePNGRepresentation(galleryImageView.image!) as NSData?
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        navigationController!.popViewController(animated: true)
+        
     }
     
     override func didReceiveMemoryWarning() {
