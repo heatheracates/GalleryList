@@ -13,6 +13,8 @@
 		325AEA2A1FCA6C4600502DC3 /* GalleryList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 325AEA281FCA6C4600502DC3 /* GalleryList.xcdatamodeld */; };
 		325AEA2C1FCA6C4600502DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325AEA2B1FCA6C4600502DC3 /* Assets.xcassets */; };
 		325AEA2F1FCA6C4600502DC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325AEA2D1FCA6C4600502DC3 /* LaunchScreen.storyboard */; };
+		325AEA391FCA99C800502DC3 /* AddPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325AEA381FCA99C800502DC3 /* AddPictureViewController.swift */; };
+		325AEA3B1FCA9BB600502DC3 /* pictures.png in Resources */ = {isa = PBXBuildFile; fileRef = 325AEA3A1FCA9BB600502DC3 /* pictures.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		325AEA2B1FCA6C4600502DC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		325AEA2E1FCA6C4600502DC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		325AEA301FCA6C4600502DC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		325AEA381FCA99C800502DC3 /* AddPictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPictureViewController.swift; sourceTree = "<group>"; };
+		325AEA3A1FCA9BB600502DC3 /* pictures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pictures.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				325AEA211FCA6C4600502DC3 /* AppDelegate.swift */,
 				325AEA231FCA6C4600502DC3 /* ViewController.swift */,
 				325AEA251FCA6C4600502DC3 /* Main.storyboard */,
+				325AEA381FCA99C800502DC3 /* AddPictureViewController.swift */,
 				325AEA2B1FCA6C4600502DC3 /* Assets.xcassets */,
 				325AEA2D1FCA6C4600502DC3 /* LaunchScreen.storyboard */,
 				325AEA301FCA6C4600502DC3 /* Info.plist */,
 				325AEA281FCA6C4600502DC3 /* GalleryList.xcdatamodeld */,
+				325AEA3A1FCA9BB600502DC3 /* pictures.png */,
 			);
 			path = GalleryList;
 			sourceTree = "<group>";
@@ -129,6 +135,7 @@
 				325AEA2F1FCA6C4600502DC3 /* LaunchScreen.storyboard in Resources */,
 				325AEA2C1FCA6C4600502DC3 /* Assets.xcassets in Resources */,
 				325AEA271FCA6C4600502DC3 /* Main.storyboard in Resources */,
+				325AEA3B1FCA9BB600502DC3 /* pictures.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				325AEA241FCA6C4600502DC3 /* ViewController.swift in Sources */,
+				325AEA391FCA99C800502DC3 /* AddPictureViewController.swift in Sources */,
 				325AEA2A1FCA6C4600502DC3 /* GalleryList.xcdatamodeld in Sources */,
 				325AEA221FCA6C4600502DC3 /* AppDelegate.swift in Sources */,
 			);
