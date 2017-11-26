@@ -40,6 +40,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = UITableViewCell()
         let cellItem = galleryItems[indexPath.row]
         cell.textLabel?.text = cellItem.photoText
+        cell.imageView?.image = UIImage(data: cellItem.photo as! Data)
+        
         return cell
     }
     
