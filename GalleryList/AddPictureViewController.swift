@@ -55,13 +55,13 @@ class AddPictureViewController: UIViewController, UIImagePickerControllerDelegat
         
         if (galleryItem != nil){
             galleryItem!.photoText = galleryImageTextFeild.text
-            galleryItem!.photo = UIImagePNGRepresentation(galleryImageView.image!) as NSData?        }
+            galleryItem!.photo = UIImagePNGRepresentation(galleryImageView.image!) as! NSData       }
         else{
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             
             let galleryItem = GalleryItem(context: context)
             galleryItem.photoText = galleryImageTextFeild.text
-            galleryItem.photo = UIImagePNGRepresentation(galleryImageView.image!) as NSData?
+            galleryItem.photo = UIImagePNGRepresentation(galleryImageView.image!) as! NSData
         }
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
